@@ -1,9 +1,26 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px;
-    >.title {
-        font-size: 28px;
-        font-weight: bold;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background: #ffffff;
+  @media(max-width: 720px) {
+    flex-wrap: wrap;
+  }
+  > .title {
+    flex: 0 0 auto;
+    margin-right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    @media(max-width: 720px) {
+      width: 100%;
     }
+  }
+  >.action {
+    position: relative;
+    width: 100%;
+  }
 }

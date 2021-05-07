@@ -1,15 +1,18 @@
-import axios from 'axios'
+import axios from "axios"
 
 const api = axios.create({
-    baseURL: 'https://jsonplaceholder.typicode.com/'
+  baseURL: "https://jsonplaceholder.typicode.com/",
 })
 
-api.interceptors.request.use((config) => {
+api.interceptors.request.use(
+  (config) => {
     config.headers = {
-        'Access-Control-Allow-Origin': '*'
+      "Access-Control-Allow-Origin": "*",
     }
     return config
-}, (response) => {
+  },
+  (response) => {
     return response
-})
+  }
+)
 export const httpClient = api

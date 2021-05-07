@@ -1,0 +1,11 @@
+.input-data {
+  width: 100%;
+  min-height: 30px;
+  border: 1px solid gray;
+  border-radius: 3px;
+  outline: none;
+  &:focus {
+    border: 1px solid #297437;
+    box-shadow:  -3px 3px 3px rgba(#A3B46A, .3);
+  }
+}

@@ -1,0 +1,31 @@
+@mixin scroll-bar{
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      background: #8888887a;
+    }
+    &::-webkit-scrollbar-track {
+      background: #0000001f;
+      margin: 20px;
+    }
+  }
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 4px;
+    &:hover {
+      background: #00000075;
+    }
+  }
+}
+.photoBook {
+  height: 100vh;
+  overflow: auto;
+  @include scroll-bar();
+}
